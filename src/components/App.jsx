@@ -86,7 +86,7 @@ export default function App() {
     useEffect(() => {
         async function questions() {
             try {
-                const res = await fetch('http://localhost:8000/questions')
+                const res = await fetch('https://quiz-db-2.onrender.com/')
                 if (!res.ok) throw new Error("Network Error")
                 const data = await res.json();
                 dispatch({ type: 'dataReceived', payload: data })
